@@ -15,6 +15,8 @@ public class ProductParser {
             double price = Double.parseDouble(inputTokens[inputTokens.length-1]);
             if(input.contains("headache pills"))
                 return new MedicalProduct(price, isImported(input));
+            if(input.contains("book"))
+                return new BookProduct(price, isImported(input));
             return new FoodProduct(price, isImported(input));
         } catch (Exception e) {
             return new InvalidProduct(0);

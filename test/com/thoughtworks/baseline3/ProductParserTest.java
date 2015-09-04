@@ -91,4 +91,10 @@ public class ProductParserTest {
         productParser = new ProductParser("1 packet of headache pills at 9.75");
         assertEquals(MedicalProduct.class, productParser.parse().getClass());
     }
+
+    @Test
+    public void shouldReturnMeBookProductObjectWhenIPassSomeBookItemToParse() {
+        productParser = new ProductParser("1 book at 12.49");
+        assertEquals(BookProduct.class, productParser.parse().getClass());
+    }
 }

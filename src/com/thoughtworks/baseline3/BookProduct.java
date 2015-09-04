@@ -4,9 +4,11 @@ package com.thoughtworks.baseline3;
 public class BookProduct implements Product{
 
     private double price;
+    private boolean imported;
 
-    public BookProduct(double price) {
+    public BookProduct(double price, boolean imported) {
         this.price = price;
+        this.imported = imported;
     }
 
     @Override
