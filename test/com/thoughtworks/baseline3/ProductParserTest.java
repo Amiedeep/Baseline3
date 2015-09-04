@@ -48,4 +48,9 @@ public class ProductParserTest {
     public void shouldReturnFalseWhenICallIsMedicalProductWithNonMedicalInputItem() {
         assertEquals(productParser.isMedicalProduct("1 imported box of something at 10.00"), false);
     }
+
+    @Test
+    public void shouldReturnFalseWhenICallIsMedicalProductWithNullAsInputItem() {
+        assertEquals(productParser.isMedicalProduct(null), false);
+    }
 }
