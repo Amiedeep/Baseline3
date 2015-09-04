@@ -1,11 +1,11 @@
 //this is an Food product
 package com.thoughtworks.baseline3;
 
-public class Food implements Product{
+public class FoodProduct implements Product{
 
     private double price;
 
-    public Food(double price) {
+    public FoodProduct(double price) {
         this.price = price;
     }
 
