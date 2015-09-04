@@ -9,10 +9,13 @@ public class ProductParser {
         this.input = input;
     }
 
-
     public boolean isImported(String input) {
         if(input == null)
             return false;
         return input.contains("imported");
+    }
+
+    public boolean isFood(String input) {
+        return false;
     }
 }
