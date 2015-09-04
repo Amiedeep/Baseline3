@@ -58,4 +58,9 @@ public class ProductParserTest {
     public void shouldReturnTrueWhenICallIsMedicalProductSomeMedicalProductAsInputItem() {
         assertEquals(productParser.isMedicalProduct("1 packet of headache pills at 9.75"), true);
     }
+
+    @Test
+    public void shouldReturnFalseWhenICallIsBookWithNonBookInputItem() {
+        assertEquals(productParser.isBook("1 imported box of something at 10.00"), false);
+    }
 }

@@ -26,4 +26,8 @@ public class ProductParser {
             return false;
         return input.contains("headache pills");
     }
+
+    public boolean isBook(String input) {
+        return false;
+    }
 }
