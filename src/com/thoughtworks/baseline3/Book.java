@@ -1,4 +1,6 @@
 //this is an a book product
+package com.thoughtworks.baseline3;
+
 public class Book implements Product{
 
     private double price;
