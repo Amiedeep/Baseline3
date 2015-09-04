@@ -79,4 +79,10 @@ public class ProductParserTest {
         productParser = new ProductParser("1 chocolate bar at 0.85");
         assertEquals(FoodProduct.class, productParser.parse().getClass());
     }
+
+    @Test
+    public void shouldReturnMeInvalidProductObjectWhenIPassSomethingRandomToParse() {
+        productParser = new ProductParser("some non-sense");
+        assertEquals(InvalidProduct.class, productParser.parse().getClass());
+    }
 }

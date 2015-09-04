@@ -11,8 +11,8 @@ public class ProductParser {
 
     public Product parse() {
         String[] inputTokens = input.split(" ");
-        double price = Double.parseDouble(inputTokens[inputTokens.length-1]);
         try {
+            double price = Double.parseDouble(inputTokens[inputTokens.length-1]);
             return new FoodProduct(price, isImported(input));
         } catch (Exception e) {
             return new InvalidProduct(0);
