@@ -4,14 +4,14 @@ import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
 
-public class FoodProductTest {
+public class MedicalProductTest {
 
-    private FoodProduct foodProduct;
+    private MedicalProduct medicalProduct;
 
     @Test
     public void shouldreturnPriceAsTaxByDefault() {
-        foodProduct = new FoodProduct(5.6);
+        medicalProduct = new MedicalProduct(5.6);
 
-        assertEquals(5.6, foodProduct.calculateTax());
+        assertEquals(5.6, medicalProduct.calculateTax());
     }
 }
