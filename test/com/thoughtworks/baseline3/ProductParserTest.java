@@ -1,5 +1,6 @@
 package com.thoughtworks.baseline3;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
@@ -8,9 +9,18 @@ public class ProductParserTest {
 
     private ProductParser productParser;
 
+    @Before
+    public void setUp() {
+        productParser = new ProductParser("1 book at 12.49");
+    }
+
     @Test
     public void shouldReturnFalseWhenICallIsImportedWithNull() {
-        productParser = new ProductParser("1 book at 12.49");
         assertEquals(productParser.isImported(null), false);
+    }
+
+    @Test
+    public void shouldReturnFalseWhenICallIsImportedWithNotImportedInput() {
+        assertEquals(productParser.isImported("1 bottle of perfume at 18.99"), false);
     }
 }
