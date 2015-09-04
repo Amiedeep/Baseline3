@@ -29,4 +29,15 @@ public class ProductTest {
         };
         assertEquals(4.70, product.roundTax(47.33, 10));
     }
+
+    @Test
+    public void shouldReturnMeTheFloorValueIfIPassDoubleWithSecondDecimalGreaterThanFive() {
+        product = new Product() {
+            @Override
+            double calculateTax() {
+                return 0;
+            }
+        };
+        assertEquals(4.80, product.roundTax(47.63, 10));
+    }
 }
