@@ -23,4 +23,9 @@ public class ProductParserTest {
     public void shouldReturnFalseWhenICallIsImportedWithNotImportedInput() {
         assertEquals(productParser.isImported("1 bottle of perfume at 18.99"), false);
     }
+
+    @Test
+    public void shouldReturnTrueWhenICallIsImportedWithImportedInput() {
+        assertEquals(productParser.isImported("1 imported bottle of perfume at 27.99"), true);
+    }
 }

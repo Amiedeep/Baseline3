@@ -10,7 +10,9 @@ public class ProductParser {
     }
 
 
-    public boolean isImported(Object input) {
-        return false;
+    public boolean isImported(String input) {
+        if(input == null)
+            return false;
+        return input.contains("imported");
     }
 }
