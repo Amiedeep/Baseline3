@@ -9,6 +9,16 @@ public class ProductParser {
         this.input = input;
     }
 
+    public Product parse() {
+        String[] inputTokens = input.split(" ");
+        double price = Double.parseDouble(inputTokens[inputTokens.length-1]);
+        try {
+            return new FoodProduct(price, isImported(input));
+        } catch (Exception e) {
+            return new InvalidProduct(0);
+        }
+    }
+
     public boolean isImported(String input) {
         if(input == null)
             return false;

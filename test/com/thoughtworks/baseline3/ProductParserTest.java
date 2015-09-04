@@ -73,4 +73,10 @@ public class ProductParserTest {
     public void shouldReturnTrueWhenICallIsBookWithSomeBookAsInputItem() {
         assertEquals(productParser.isBook("1 book at 12.49"), true);
     }
+
+    @Test
+    public void shouldReturnMeFoodProductObjectWhenIPassSomeFoodItemToParse() {
+        productParser = new ProductParser("1 chocolate bar at 0.85");
+        assertEquals(FoodProduct.class, productParser.parse().getClass());
+    }
 }
