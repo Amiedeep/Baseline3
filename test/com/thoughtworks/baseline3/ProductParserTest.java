@@ -63,4 +63,9 @@ public class ProductParserTest {
     public void shouldReturnFalseWhenICallIsBookWithNonBookInputItem() {
         assertEquals(productParser.isBook("1 imported box of something at 10.00"), false);
     }
+
+    @Test
+    public void shouldReturnFalseWhenICallIsBookWithNullAsInputItem() {
+        assertEquals(productParser.isBook(null), false);
+    }
 }
