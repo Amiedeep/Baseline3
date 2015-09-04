@@ -68,4 +68,9 @@ public class ProductParserTest {
     public void shouldReturnFalseWhenICallIsBookWithNullAsInputItem() {
         assertEquals(productParser.isBook(null), false);
     }
+
+    @Test
+    public void shouldReturnTrueWhenICallIsBookWithSomeBookAsInputItem() {
+        assertEquals(productParser.isBook("1 book at 12.49"), true);
+    }
 }
