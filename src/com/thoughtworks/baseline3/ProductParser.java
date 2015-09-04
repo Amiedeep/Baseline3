@@ -16,6 +16,8 @@ public class ProductParser {
     }
 
     public boolean isFood(String input) {
-        return false;
+        if(input == null)
+            return false;
+        return input.contains("chocolates");
     }
 }
