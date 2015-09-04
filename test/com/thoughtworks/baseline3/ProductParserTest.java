@@ -53,4 +53,9 @@ public class ProductParserTest {
     public void shouldReturnFalseWhenICallIsMedicalProductWithNullAsInputItem() {
         assertEquals(productParser.isMedicalProduct(null), false);
     }
+
+    @Test
+    public void shouldReturnTrueWhenICallIsMedicalProductSomeMedicalProductAsInputItem() {
+        assertEquals(productParser.isMedicalProduct("1 packet of headache pills at 9.75"), true);
+    }
 }

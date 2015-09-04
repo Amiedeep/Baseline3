@@ -22,6 +22,8 @@ public class ProductParser {
     }
 
     public boolean isMedicalProduct(String input) {
-        return false;
+        if(input == null)
+            return false;
+        return input.contains("headache pills");
     }
 }
