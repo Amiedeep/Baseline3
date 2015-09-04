@@ -43,4 +43,9 @@ public class ProductParserTest {
     public void shouldReturnTrueWhenICallIsFoodWithChocolateFoodInputItem() {
         assertEquals(productParser.isFood("1 box of imported chocolates at 11.25"), true);
     }
+
+    @Test
+    public void shouldReturnFalseWhenICallIsMedicalProductWithNonMedicalInputItem() {
+        assertEquals(productParser.isMedicalProduct("1 imported box of something at 10.00"), false);
+    }
 }

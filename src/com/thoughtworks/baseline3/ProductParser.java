@@ -20,4 +20,8 @@ public class ProductParser {
             return false;
         return input.contains("chocolates");
     }
+
+    public boolean isMedicalProduct(String input) {
+        return false;
+    }
 }
