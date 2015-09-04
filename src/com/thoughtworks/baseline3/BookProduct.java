@@ -1,7 +1,7 @@
 //this is an a book product
 package com.thoughtworks.baseline3;
 
-public class BookProduct implements Product{
+public class BookProduct extends Product{
 
     private double price;
     private boolean imported;

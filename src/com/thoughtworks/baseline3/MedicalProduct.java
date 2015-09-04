@@ -1,7 +1,7 @@
 //this is an medical product
 package com.thoughtworks.baseline3;
 
-public class MedicalProduct implements Product {
+public class MedicalProduct extends Product {
 
     private double price;
     private boolean imported;

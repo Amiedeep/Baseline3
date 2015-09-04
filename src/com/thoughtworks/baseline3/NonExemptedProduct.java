@@ -1,7 +1,7 @@
 //this is an Non-exempted product
 package com.thoughtworks.baseline3;
 
-public class NonExemptedProduct implements Product{
+public class NonExemptedProduct extends Product{
 
     private double price;
     private boolean imported;

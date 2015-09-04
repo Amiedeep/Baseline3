@@ -1,7 +1,7 @@
 //this is an invalid product
 package com.thoughtworks.baseline3;
 
-public class InvalidProduct implements Product {
+public class InvalidProduct extends Product {
 
     private double price;
 
