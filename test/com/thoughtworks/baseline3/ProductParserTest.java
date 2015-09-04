@@ -33,4 +33,9 @@ public class ProductParserTest {
     public void shouldReturnFalseWhenICallIsFoodWithNonFoodInputItem() {
         assertEquals(productParser.isFood("1 imported box of something at 10.00"), false);
     }
+
+    @Test
+    public void shouldReturnFalseWhenICallIsFoodWithNullInputItem() {
+        assertEquals(productParser.isFood(null), false);
+    }
 }
