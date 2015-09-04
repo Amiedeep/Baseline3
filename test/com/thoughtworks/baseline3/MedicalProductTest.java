@@ -10,7 +10,7 @@ public class MedicalProductTest {
 
     @Test
     public void shouldreturnPriceAsTaxByDefault() {
-        medicalProduct = new MedicalProduct(5.6);
+        medicalProduct = new MedicalProduct(5.6, true);
 
         assertEquals(5.6, medicalProduct.calculateTax());
     }

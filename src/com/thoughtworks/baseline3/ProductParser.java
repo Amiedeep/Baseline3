@@ -13,6 +13,8 @@ public class ProductParser {
         String[] inputTokens = input.split(" ");
         try {
             double price = Double.parseDouble(inputTokens[inputTokens.length-1]);
+            if(input.contains("headache pills"))
+                return new MedicalProduct(price, isImported(input));
             return new FoodProduct(price, isImported(input));
         } catch (Exception e) {
             return new InvalidProduct(0);
