@@ -4,9 +4,11 @@ package com.thoughtworks.baseline3;
 public class NonExemptedProduct implements Product{
 
     private double price;
+    private boolean imported;
 
-    public NonExemptedProduct(double price) {
+    public NonExemptedProduct(double price, boolean imported) {
         this.price = price;
+        this.imported = imported;
     }
 
     @Override

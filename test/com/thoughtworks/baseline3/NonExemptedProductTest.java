@@ -10,7 +10,7 @@ public class NonExemptedProductTest {
 
     @Test
     public void shouldreturnPriceAsTaxByDefault() {
-        nonExemptedProduct = new NonExemptedProduct(5.6);
+        nonExemptedProduct = new NonExemptedProduct(5.6, true);
 
         assertEquals(5.6, nonExemptedProduct.calculateTax());
     }

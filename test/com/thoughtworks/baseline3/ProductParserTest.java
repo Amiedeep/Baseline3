@@ -97,4 +97,10 @@ public class ProductParserTest {
         productParser = new ProductParser("1 book at 12.49");
         assertEquals(BookProduct.class, productParser.parse().getClass());
     }
+
+    @Test
+    public void shouldReturnMeNonExemptedProductObjectWhenIPassSomeNonExemptedItemToParse() {
+        productParser = new ProductParser("1 imported bottle of perfume at 47.50");
+        assertEquals(NonExemptedProduct.class, productParser.parse().getClass());
+    }
 }

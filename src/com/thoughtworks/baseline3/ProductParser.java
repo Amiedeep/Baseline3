@@ -17,7 +17,9 @@ public class ProductParser {
                 return new MedicalProduct(price, isImported(input));
             if(input.contains("book"))
                 return new BookProduct(price, isImported(input));
-            return new FoodProduct(price, isImported(input));
+            if(input.contains("chocolate"))
+                return new FoodProduct(price, isImported(input));
+            return new NonExemptedProduct(price, isImported(input));
         } catch (Exception e) {
             return new InvalidProduct(0);
         }
